@@ -11,8 +11,8 @@ export VERSIONER_PYTHON_PREFER_64_BIT=yes
 export VERSIONER_PYTHON_PREFER_32_BIT=no
 
 # spark
-export SPARK_HOME = "/usr/local/spark-2.0.0-bin-hadoop2.7/"
-export PYTHONPATH = "$SPARK_HOME/python:$SPARK_HOME/python:build:$PYTHONPATH"
+export SPARK_HOME="/usr/local/spark-2.0.0-bin-hadoop2.7/"
+export PYTHONPATH="$SPARK_HOME/python:$SPARK_HOME/python/build:$PYTHONPATH"
 
 # java_home
 export JAVA_HOME=$(/usr/libexec/java_home)
