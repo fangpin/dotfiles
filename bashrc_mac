@@ -3,15 +3,19 @@ alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 alias ll='ls -al'
 alias vi='vim'
 
-
-PATH="/usr/local/spark-2.0.0-bin-hadoop2.7/bin/:/usr/local/apache-maven-3.3.9/bin/:/usr/local/mysql/bin:${PATH}"
+# spark
+PATH="/usr/local/spark-2.0.0-bin-hadoop2.7/bin/:$PATH"
+# mvn
+PATH="/usr/local/apache-maven-3.3.9/bin/:/usr/local/mysql/bin:${PATH}"
 export PATH
+
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 export VERSIONER_PYTHON_PREFER_64_BIT=yes
 export VERSIONER_PYTHON_PREFER_32_BIT=no
 
 # spark
 export SPARK_HOME="/usr/local/spark-2.0.0-bin-hadoop2.7/"
+# pyspark
 export PYTHONPATH="$SPARK_HOME/python:$SPARK_HOME/python/build:$PYTHONPATH"
 
 # java_home
