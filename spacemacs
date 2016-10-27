@@ -36,6 +36,7 @@ values."
      javascript
      shell
      syntax-checking
+     scala
      ;; git
      ;; markdown
      org
@@ -156,7 +157,7 @@ values."
    dotspacemacs-display-default-layout nil
    ;; If non nil then the last auto saved layouts are resume automatically upon
    ;; start. (default nil)
-   dotspacemacs-auto-resume-layouts nil
+   dotspacemacs-auto-resume-layouts t
    ;; Location where to auto-save files. Possible values are `original' to
    ;; auto-save the file in-place, `cache' to auto-save the file to another
    ;; file stored in the cache directory and `nil' to disable auto-saving.
@@ -248,45 +249,12 @@ values."
 
 
 (defun dotspacemacs/user-init ()
+  ;; c
   (setq-default c-default-style "bsd")
   (setq-default c-basic-offset 4)
   (setq-default tab-width 4)
-
-(require 'ox-publish)
-(setq org-publish-project-alist
-      '(
-        ("blog-notes"
-         :base-directory "~/org/blog/"
-         :base-extension "org"
-         :publishing-directory "~/org/fangpin.github.io"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4
-         :section-number nil
-         :org-html-preamble t
-         :org-html-postamble t
-         :auto-sitemap t    ; Generate sitemap.org automagically
-         :sitemap-filemap "sitemap.org"    ; ... call it sitemap.org (it's the default)...
-         :sitemap-title "Sitemap"    ; ... with title 'Sitemap'
-         :export-creator-info nil    ; Disable the inclusion of "Created by Org".
-         :export-author-info nil     ; Disables the inclusion of "Author: Your Name".
-         :table-of-contents nil      ; Set this to "t" if you want a table of contents.
-         :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/worg.css\"/>"
-         :html-preamble "<div id=\"menu\"><p><a href=\"index.html\" >Home</a></p></div>"
-         :html-postamble ""          ; puts disqus js code here for a comment region
-         )
-        ("blog-static"
-         :base-directory "~/org/blog/"
-         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory "~/org/fangpin.github.io/"
-         :recursive t
-         :publishing-function org-publish-attachment
-         )
-        ("blog" :components ("blog-notes" "blog-static"))
-        ;;
-        ))
-
-
+  ;; scala
+  (setq-default scala-indent:step 4)
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
 executes.
