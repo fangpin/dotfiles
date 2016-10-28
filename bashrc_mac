@@ -4,19 +4,18 @@ alias ll='ls -al'
 alias vi='vim'
 
 # spark
-PATH="/usr/local/spark-2.0.0-bin-hadoop2.7/bin/:$PATH"
 # mvn
-PATH="/usr/local/apache-maven-3.3.9/bin/:/usr/local/mysql/bin:${PATH}"
-export PATH
+PATH="/usr/local/apache-maven-3.3.9/bin:/usr/local/mysql/bin:${PATH}"
+export PATH=$PATH:/usr/local/scala-2.11.8/bin
 
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 export VERSIONER_PYTHON_PREFER_64_BIT=yes
 export VERSIONER_PYTHON_PREFER_32_BIT=no
 
 # spark
-export SPARK_HOME="/usr/local/spark-2.0.0-bin-hadoop2.7/"
-# pyspark
-export PYTHONPATH="$SPARK_HOME/python:$SPARK_HOME/python/build:$PYTHONPATH"
+export SPARK_HOME="~/spark-2.0.1-bin-hadoop2.7"
+PATH=$SPARK_HOME/bin:$PATH
 
+export PYTHONPATH=$SPARK_HOME/python/:$SPARK_HOME/python/build:$SPARK_HOME/python/lib/py4j-0.10.3-src.zip:$PYTHONPATH
 # java_home
 export JAVA_HOME=$(/usr/libexec/java_home)
