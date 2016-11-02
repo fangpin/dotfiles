@@ -117,3 +117,5 @@ fi
 
 
 alias emacs='emacs --no-win --insecure'
+
+setxkbmap -option "ctrl:swapcaps"
