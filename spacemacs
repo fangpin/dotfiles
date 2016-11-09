@@ -258,6 +258,9 @@ values."
   ;; opencl cuda
   (setq auto-mode-alist (cons '("\.cl$" . c-mode) auto-mode-alist))
   (setq auto-mode-alist (cons '("\.cu$" . c-mode) auto-mode-alist))
+  ;; lex and yacc
+  (setq auto-mode-alist (cons '("\.l$" . c-mode) auto-mode-alist))
+  (setq auto-mode-alist (cons '("\.y$" . c-mode) auto-mode-alist))
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
 executes.
