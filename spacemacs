@@ -18,6 +18,8 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     csv
+     markdown
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -37,6 +39,10 @@ values."
      shell
      syntax-checking
      scala
+     ranger
+     erc
+     fasd
+     (ibuffer :variables ibuffer-group-buffers-by 'projects)
      ;; git
      ;; markdown
      org
@@ -157,7 +163,7 @@ values."
    dotspacemacs-display-default-layout nil
    ;; If non nil then the last auto saved layouts are resume automatically upon
    ;; start. (default nil)
-   dotspacemacs-auto-resume-layouts t
+   dotspacemacs-auto-resume-layouts nil
    ;; Location where to auto-save files. Possible values are `original' to
    ;; auto-save the file in-place, `cache' to auto-save the file to another
    ;; file stored in the cache directory and `nil' to disable auto-saving.
@@ -255,9 +261,6 @@ values."
   (setq-default tab-width 4)
   ;; scala
   (setq-default scala-indent:step 4)
-  ;; opencl cuda
-  (setq auto-mode-alist (cons '("\.cl$" . c-mode) auto-mode-alist))
-  (setq auto-mode-alist (cons '("\.cu$" . c-mode) auto-mode-alist))
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
 executes.
