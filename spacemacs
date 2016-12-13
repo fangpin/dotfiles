@@ -261,6 +261,15 @@ values."
   (setq-default tab-width 4)
   ;; scala
   (setq-default scala-indent:step 4)
+<<<<<<< HEAD
+=======
+  ;; opencl cuda
+  (setq auto-mode-alist (cons '("\.cl$" . c-mode) auto-mode-alist))
+  (setq auto-mode-alist (cons '("\.cu$" . c-mode) auto-mode-alist))
+  ;; lex and yacc
+  (setq auto-mode-alist (cons '("\.l$" . c-mode) auto-mode-alist))
+  (setq auto-mode-alist (cons '("\.y$" . c-mode) auto-mode-alist))
+>>>>>>> 6cb49f9e577b75321cc9b581e92958444158d229
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
 executes.
