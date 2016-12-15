@@ -114,8 +114,35 @@ if ! shopt -oq posix; then
 fi
 
 
-
-
-alias emacs='emacs --no-win --insecure'
-
+alias emacs='emacs --no-win --insecure' 
 setxkbmap -option "ctrl:swapcaps"
+
+export TERM=xterm-256color
+
+
+
+# path 
+export BOOST_ROOT=/opt/boost/
+export BOOST_DIR=/opt/boost/
+export LD_LIBRARY_PATH=/home/fangpin/project/clcaffe-dep/Gtest/include/lib64:$LD_LIBRARY_PATH
+
+export GTEST_ROOT=/home/fangpin/project/clcaffe-dep/Gtest
+
+export AMDAPPSDKROOT=/opt/AMDAPPSDK-3.0
+
+# caffe python
+export PYTHONPATH=~/caffe/python:$PYTHONPATH
+# export PYTHONPATH=~/project/clcaffe/python:$PYTHONPATH
+
+
+
+# docker checkpoint
+alias docker='sudo ~/Downloads/docker-1.10.0-dev --host unix:///var/run/docker-dev.sock'
+alias pi='sudo pip install --proxy https://child-prc.intel.com:913'
+
+
+export ch=~/caffe-cpu/
+
+# fasd
+eval "$(fasd --init auto)"
+alias v='f -e vim'
