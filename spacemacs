@@ -18,6 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     vimscript
      csv
      markdown
      ;; ----------------------------------------------------------------
@@ -25,7 +26,6 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;; auto-completion
      ;; better-defaults
      emacs-lisp
      auto-completion
@@ -36,7 +36,8 @@ values."
      html
      java
      javascript
-     shell
+     (shell :variables shell-default-position 'bottom
+            shell-default-term-shell "/bin/bash")
      syntax-checking
      scala
      ranger
@@ -44,8 +45,15 @@ values."
      fasd
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      ;; git
-     ;; markdown
-     org
+     markdown
+     (elfeed :variables
+             elfeed-feeds '(("http://nullprogram.com/feed/" blog emacs)
+                            "http://www.50ply.com/atom.xml"  ; no autotagging
+                            ("http://nedroid.com/feed/" webcomic))
+             :variables elfeed-enable-web-interface t)
+     (org :variables org-enable-bootstrap-support t
+          :variables org-enable-reveal-js-support t
+          :variables org-enable-github-support t)
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -261,15 +269,11 @@ values."
   (setq-default tab-width 4)
   ;; scala
   (setq-default scala-indent:step 4)
-<<<<<<< HEAD
-=======
   ;; opencl cuda
   (setq auto-mode-alist (cons '("\.cl$" . c-mode) auto-mode-alist))
   (setq auto-mode-alist (cons '("\.cu$" . c-mode) auto-mode-alist))
-  ;; lex and yacc
-  (setq auto-mode-alist (cons '("\.l$" . c-mode) auto-mode-alist))
-  (setq auto-mode-alist (cons '("\.y$" . c-mode) auto-mode-alist))
->>>>>>> 6cb49f9e577b75321cc9b581e92958444158d229
+  ;; agenda view
+  (setq org-agenda-files (list "~/org/todo.org"))
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
 executes.
