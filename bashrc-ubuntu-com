@@ -114,7 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 
-alias emacs='emacs --no-win --insecure' 
+#alias emacs='emacs --no-win --insecure' 
 setxkbmap -option "ctrl:swapcaps"
 
 export TERM=xterm-256color
@@ -131,7 +131,7 @@ export GTEST_ROOT=/home/fangpin/project/clcaffe-dep/Gtest
 export AMDAPPSDKROOT=/opt/AMDAPPSDK-3.0
 
 # caffe python
-export PYTHONPATH=~/caffe/python:$PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:/home/cuda/project/caffe/python
 # export PYTHONPATH=~/project/clcaffe/python:$PYTHONPATH
 
 
