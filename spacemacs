@@ -40,6 +40,8 @@ values."
             shell-default-term-shell "/bin/bash")
      syntax-checking
      scala
+     (latex :variables latex-build-command "LaTeX"
+            :variables latex-enable-auto-fill t)
      ranger
      erc
      fasd
@@ -284,6 +286,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
 (defun dotspacemacs/user-config
     (
+     (add-hook 'doc-view-mode-hook 'auto-revert-mode)
      )
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
