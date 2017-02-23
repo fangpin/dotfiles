@@ -40,6 +40,8 @@ values."
             shell-default-term-shell "/bin/bash")
      syntax-checking
      scala
+     (latex :variables latex-build-command "LaTeX"
+            :variables latex-enable-auto-fill t)
      ranger
      erc
      fasd
@@ -274,6 +276,22 @@ values."
   (setq auto-mode-alist (cons '("\.cu$" . c-mode) auto-mode-alist))
   ;; agenda view
   (setq org-agenda-files (list "~/org/todo.org"))
+  j
+  ;; latex pdf viewer selecter
+  ;; (cond
+  ;;  ((string-equal system-type "darwin")
+  ;;   (progn (setq TeX-view-program-selection '((output-pdf "Skim")))))
+  ;;  ((string-equal system-type "gnu/linux")
+  ;;   (progn (setq TeX-view-program-selection '((output-pdf "Okular"))))))
+
+  ;; jump between pdf and tex
+  ;; (setq TeX-source-correlate-mode t)
+  ;; (setq TeX-source-correlate-start-server t)
+  ;; (setq TeX-source-correlate-method 'synctex)
+  ;; (setq TeX-view-program-list
+  ;;       '(("Okular" "okular --unique %o#src:%n%b")
+  ;;         ("Skim" "displayline -b -g %n %o %b")))
+
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
 executes.
@@ -284,6 +302,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
 (defun dotspacemacs/user-config
     (
+     (add-hook 'doc-view-mode-hook 'auto-revert-mode)
      )
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
