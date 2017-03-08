@@ -1,4 +1,4 @@
-OPENCV_PATH=/home/fangpin/Downloads/caffe-dep/opencv-3.1.0
+OPENCV_PATH=/home/fangpin/Downloads/opencv-3.2.0
 
 
 sudo apt-get install build-essential
