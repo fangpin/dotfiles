@@ -21,6 +21,7 @@ def get_response(msg):
 def tuling_reply(msg):
     defaultReply = 'I received: ' + msg['Text']
     reply = get_response(msg['Text'])
+    reply += u'[主人不在，图灵机器人接管中]'
     return reply or defaultReply
 
 itchat.auto_login(hotReload=True)
