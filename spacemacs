@@ -44,7 +44,6 @@ values."
             :variables latex-enable-auto-fill t)
      ranger
      erc
-     fasd
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      ;; git
      markdown
@@ -53,9 +52,9 @@ values."
                             "http://www.50ply.com/atom.xml"  ; no autotagging
                             ("http://nedroid.com/feed/" webcomic))
              :variables elfeed-enable-web-interface t)
-     (org :variables org-enable-bootstrap-support t
-          :variables org-enable-reveal-js-support t
-          :variables org-enable-github-support t)
+     (org
+      ;; :variables org-enable-bootstrap-support t
+          :variables org-enable-reveal-js-support t)
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -276,7 +275,8 @@ values."
   (setq auto-mode-alist (cons '("\.cu$" . c-mode) auto-mode-alist))
   ;; agenda view
   (setq org-agenda-files (list "~/org/todo.org"))
-  j
+  ;; vue.js
+  (setq org-reveal-root "~/org/reveal")
   ;; latex pdf viewer selecter
   ;; (cond
   ;;  ((string-equal system-type "darwin")
@@ -302,7 +302,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
 (defun dotspacemacs/user-config
     (
-     (add-hook 'doc-view-mode-hook 'auto-revert-mode)
+     ;; (add-hook 'doc-view-mode-hook 'auto-revert-mode)
      )
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
