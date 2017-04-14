@@ -37,11 +37,12 @@ values."
      java
      javascript
      (shell :variables shell-default-position 'bottom
-            shell-default-term-shell "/bin/bash")
+            shell-default-term-shell "/bin/bash"
+            shell-default-shell 'eshell)
      syntax-checking
      scala
      (latex :variables latex-build-command "LaTeX"
-            :variables latex-enable-auto-fill t)
+            variables latex-enable-auto-fill t)
      ranger
      erc
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
@@ -54,7 +55,7 @@ values."
              :variables elfeed-enable-web-interface t)
      (org
       ;; :variables org-enable-bootstrap-support t
-          :variables org-enable-reveal-js-support t)
+      :variables org-enable-reveal-js-support t)
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)

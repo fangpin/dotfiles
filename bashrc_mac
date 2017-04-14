@@ -13,7 +13,7 @@ export VERSIONER_PYTHON_PREFER_32_BIT=no
 
 # spark
 export SPARK_HOME="/Users/fangpin/spark-2.0.1-bin-hadoop2.7"
-export PATH=$SPARK_HOME/bin:$PATH
+export PATH=$SPARK_HOME/bin:$PATH:/Library/TeX/texbin
 export PYTHONPATH=$SPARK_HOME/python/:$SPARK_HOME/python/build:$SPARK_HOME/python/lib/py4j-0.10.3-src.zip:$PYTHONPATH
 
 # java_home
@@ -24,3 +24,4 @@ alias aws='cd && ssh -i "ap-singa-micro.pem" ubuntu@ec2-54-169-175-204.ap-southe
 eval "$(fasd --init auto)"
 alias v='f -e vim'
 
+set -o vi
