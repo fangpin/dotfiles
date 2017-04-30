@@ -25,3 +25,4 @@ eval "$(fasd --init auto)"
 alias v='f -e vim'
 
 set -o vi
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs --no-win'
