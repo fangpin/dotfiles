@@ -28,6 +28,7 @@ values."
      ;; ----------------------------------------------------------------
      ;; better-defaults
      emacs-lisp
+     common-lisp
      auto-completion
      c-c++
      python
@@ -42,7 +43,7 @@ values."
      syntax-checking
      scala
      (latex :variables latex-build-command "LaTeX"
-            variables latex-enable-auto-fill t)
+            latex-enable-auto-fill t)
      ranger
      erc
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
@@ -306,6 +307,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
 (defun dotspacemacs/user-config
     (
+     (setq inferior-lisp-program "/usr/local/bin/lisp")
      ;; (add-hook 'doc-view-mode-hook 'auto-revert-mode)
      )
   "Configuration function for user code.
