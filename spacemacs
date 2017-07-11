@@ -47,7 +47,7 @@ values."
      ranger
      erc
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
-     ;; git
+     git
      markdown
      (elfeed :variables
              elfeed-feeds '(("http://nullprogram.com/feed/" blog emacs)
@@ -282,6 +282,10 @@ values."
   (setq org-agenda-files (list "~/org/todo.org"))
   ;; vue.js
   (setq org-reveal-root "~/org/reveal")
+
+  ;; use spacemacs as the =$GIT_EDITOR= for editing git commits messages.
+  ;; (global-git-commit-mode t)
+
   ;; latex pdf viewer selecter
   ;; (cond
   ;;  ((string-equal system-type "darwin")
@@ -307,7 +311,6 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
 (defun dotspacemacs/user-config
     (
-     (setq inferior-lisp-program "/usr/local/bin/lisp")
      ;; (add-hook 'doc-view-mode-hook 'auto-revert-mode)
      )
   "Configuration function for user code.
