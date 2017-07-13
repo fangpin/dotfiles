@@ -29,3 +29,6 @@ sudo sh ./install
 sudo apt-get install python-pip
 sudo pip install adium-theme-ubuntu atari-py autopep8 box2d-py click crypto cycler dask decorator Flask funcsigs functools32 gym imageio itchat itsdangerous jedi Jinja2 json-rpc Keras MarkupSafe matplotlib mock mujoco-py MySQL-python Naked network networkx numpy olefile pachi-py pandas pbr pep8 Pillow pip protobuf pycrypto pyglet pymongo PyOpenGL pyparsing pypng PyQRCode python-augeas python-dateutil python-simsimi pytz PyYAML requests scikit-image scipy service-factory setuptools shellescape six subprocess32 tensorflow tensorlayer Theano toolz tqdm unity-lens-photos Werkzeug wheel
 
+# swap caps and ctrl
+sudo apt-get install gnome-tweak-tool
+# tweak-tool中设置： Typing-Ctrl key positon-Swap Ctrl and Caps Lock
