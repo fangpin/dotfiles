@@ -113,9 +113,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-#alias emacs='emacs --no-win --insecure' 
-setxkbmap -option "ctrl:swapcaps"
+# emacs in shell
+alias emacs='emacs --no-win --insecure' 
 
 export TERM=xterm-256color
 
@@ -141,8 +140,3 @@ alias docker='sudo ~/Downloads/docker-1.10.0-dev --host unix:///var/run/docker-d
 alias pi='sudo pip install --proxy https://child-prc.intel.com:913'
 
 
-export ch=~/caffe-cpu/
-
-# fasd
-eval "$(fasd --init auto)"
-alias v='f -e vim'
