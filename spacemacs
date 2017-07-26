@@ -30,8 +30,9 @@ values."
      emacs-lisp
      common-lisp
      auto-completion
-     c-c++
-     python
+     (c-c++ :variables c-c++-enable-clang-support t)
+     cscope
+     (python :variables python-enable-yapf-format-on-save t)
      games
      gtags
      html
@@ -49,20 +50,10 @@ values."
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      git
      markdown
-     (elfeed :variables
-             elfeed-feeds '(("http://nullprogram.com/feed/" blog emacs)
-                            "http://www.50ply.com/atom.xml"  ; no autotagging
-                            ("http://nedroid.com/feed/" webcomic))
-             :variables elfeed-enable-web-interface t)
      (org
-      ;; :variables org-enable-bootstrap-support t
-      :variables org-enable-reveal-js-support t)
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
+      :variables org-enable-bootstrap-support t
+      org-enable-reveal-js-support t)
      syntax-checking
-     ;; version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
