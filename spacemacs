@@ -18,6 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     (elfeed :variables rmh-elfeed-org-files (list "~/org/elfeed.org"))
      vimscript
      csv
      markdown
@@ -46,7 +47,6 @@ values."
      (latex :variables latex-build-command "LaTeX"
             latex-enable-auto-fill t)
      ranger
-     erc
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      git
      markdown
@@ -118,9 +118,9 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         spacemacs-light
                          spacemacs-dark
                          sanityinc-solarized-dark
-                         spacemacs-light
                          solarized-light
                          solarized-dark
                          leuven
@@ -273,24 +273,6 @@ values."
   (setq org-agenda-files (list "~/org/todo.org"))
   ;; vue.js
   (setq org-reveal-root "~/org/reveal")
-
-  ;; use spacemacs as the =$GIT_EDITOR= for editing git commits messages.
-  ;; (global-git-commit-mode t)
-
-  ;; latex pdf viewer selecter
-  ;; (cond
-  ;;  ((string-equal system-type "darwin")
-  ;;   (progn (setq TeX-view-program-selection '((output-pdf "Skim")))))
-  ;;  ((string-equal system-type "gnu/linux")
-  ;;   (progn (setq TeX-view-program-selection '((output-pdf "Okular"))))))
-
-  ;; jump between pdf and tex
-  ;; (setq TeX-source-correlate-mode t)
-  ;; (setq TeX-source-correlate-start-server t)
-  ;; (setq TeX-source-correlate-method 'synctex)
-  ;; (setq TeX-view-program-list
-  ;;       '(("Okular" "okular --unique %o#src:%n%b")
-  ;;         ("Skim" "displayline -b -g %n %o %b")))
 
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
