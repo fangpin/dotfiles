@@ -18,7 +18,14 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     (elfeed :variables rmh-elfeed-org-files (list "~/org/elfeed.org"))
+     ;; (elfeed :variables rmh-elfeed-org-files (list "~/org/elfeed.org"))
+     (elfeed :variables
+             elfeed-enable-web-interface t
+             rmh-elfeed-org-files (list "~/org/elfeed.org")
+             ;; elfeed-feeds '(
+             ;;                ("https://news-at.zhihu.com/api/4/stories/latest?client=0" 知乎)
+             ;; )
+     )
      vimscript
      csv
      markdown
