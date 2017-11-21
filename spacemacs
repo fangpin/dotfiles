@@ -18,13 +18,23 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     ;; (elfeed :variables rmh-elfeed-org-files (list "~/org/elfeed.org"))
      (elfeed :variables
-             elfeed-enable-web-interface t
-             rmh-elfeed-org-files (list "~/org/elfeed.org")
-             ;; elfeed-feeds '(
-             ;;                ("https://news-at.zhihu.com/api/4/stories/latest?client=0" 知乎)
-             ;; )
+             elfeed-feeds '(
+                            ("http://www.matrix67.com/blog/feed.asp" Matrix67)
+                            ("http://feed.feedsky.com/leica" Lecia中文)
+                            ("http://www.zhihudaily.net/rss.xml" 知乎日报)
+                            ("http://linux.cn/rss-tech.xml" linux中国)
+                            ("http://www.cppblog.com/kevinlynx/category/6337.html/rss" c++博客)
+                            ("http://www.ruanyifeng.com/blog/atom.xml" 阮一峰的博客)
+                            ("http://coolshell.cn/feed" coolshell)
+                            ("colah.github.io/rss.xml" colah深度学习)
+                            ("http://www.ebaytechblog.com/feed/" ebaytech)
+                            ("http://top.jobbole.com/tag/algorithm/feed/" 算法伯乐在线)
+                            ("http://top.jobbole.com/tag/algorithm/feed/" python伯乐在线)
+                            ("http://top.jobbole.com/tag/cpp/feed/" cpp伯乐在线)
+                            ("http://top.jobbole.com/tag/cpp/feed/" 大数据伯乐在线)
+                            ("http://tqchen.github.io/rss.xml" 陈天齐博客)
+             )
      )
      vimscript
      csv
@@ -138,7 +148,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 15
+                               :size 19
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
