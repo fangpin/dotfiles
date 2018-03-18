@@ -84,3 +84,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias matlab="/usr/local/MATLAB/R2017a/bin/matlab"
+
+export PYTHONPATH=$PYTHONPATH:~/repos/algorithm-reference-library
+export PATH=$PATH:~/Dowloads/htk/HTKTools
+export PATH=/home/fangpin/anaconda/bin:$PATH
+
