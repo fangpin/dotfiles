@@ -1,14 +1,7 @@
-[==================================================]
 " dark_powered.vim --- Dark powered mode of SpaceVim
 " Copyright (c) 2016-2017 Wang Shidong & Contributors
 " Author: Wang Shidong < wsdjeg at 163.com >
-- vim-javacomplete2: Installing done.
-- vim-mundo: Installing done.
 "=============================================================================
-- vim-snippets: Installing done.
-- vimfiler.vim: Installing done.
-- vimshell.vim: Installing done.
-- yowish.vim: Installing done.
 let g:spacevim_realtime_leader_guide = 1
 let g:spacevim_enable_tabline_filetype_icon = 1
 let g:spacevim_enable_statusline_display_mode = 0
