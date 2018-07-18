@@ -18,6 +18,10 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     yaml
+     (spell-checking :variables spell-checking-enable-auto-dictionary t
+                     spell-checking-enable-by-default nil
+                     enable-flyspell-auto-completion t)
      vimscript
      csv
      markdown
@@ -43,8 +47,10 @@ values."
             shell-default-shell 'term)
      syntax-checking
      scala
-     (latex :variables latex-build-command "LaTeX"
-            latex-enable-auto-fill t)
+     (latex :variables latex-build-command "LatesMk"
+            latex-enable-auto-fill t
+            latex-enable-folding t)
+     bibtex
      ranger
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      git
@@ -52,7 +58,6 @@ values."
      (org
       :variables org-enable-bootstrap-support t
       org-enable-reveal-js-support t)
-     syntax-checking
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -117,11 +122,11 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         solarized-dark
                          solarized-light
                          sanityinc-solarized-dark
                          spacemacs-dark
                          spacemacs-light
-                         solarized-dark
                          leuven
                          monokai
                          zenburn)
@@ -130,7 +135,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 19
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -272,6 +277,10 @@ values."
   (setq org-agenda-files (list "~/org/todo.org"))
   ;; vue.js
   (setq org-reveal-root "~/org/reveal")
+  (setq configuration-layer--elpa-archives
+        '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+          ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+          ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
