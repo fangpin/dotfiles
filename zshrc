@@ -52,7 +52,7 @@ ZSH_THEME="sammy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx autojump)
+plugins=(git osx autojump zsh-syntax-highlighting colored-man coloriz zsh-completion)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,3 +91,9 @@ export PYTHONPATH=$PYTHONPATH:~/repos/algorithm-reference-library
 export PATH=$PATH:~/Dowloads/htk/HTKTools
 export PATH=/home/fangpin/anaconda/bin:$PATH
 
+
+##set oracle jdk environment
+export JAVA_HOME=/usr/lib/jvm/jdk-10.0.2  ## 这里要注意目录要换成自己解压的jdk 目录
+export JRE_HOME=${JAVA_HOME}/jre  
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
+export PATH=${JAVA_HOME}/bin:$PATH  
