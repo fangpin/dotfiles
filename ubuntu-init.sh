@@ -8,8 +8,6 @@ sudo apt-get install curl
 
 # install ohmyzsh
 sudo apt-get install zsh
-sudo chsh -s $(which zsh)
-echo $SHELL
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 rm ~/.zshrc
 cd && ln -s repos/dotfiles/zshrc ~/.zshrc
