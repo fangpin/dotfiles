@@ -85,6 +85,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias luo-ruan="ssh pin@202.120.39.10 -p51000"
+alias luo="ssh luo@202.120.38.75"
+
 alias matlab="/usr/local/MATLAB/R2017a/bin/matlab"
 
 export PYTHONPATH=$PYTHONPATH:~/repos/algorithm-reference-library
