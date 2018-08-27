@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# name: acm
+# key: acm
+# --
+#include <cstdio>
+#include <cstring>
+#include <cmath>
+#include <vector>
+#include <climits>
+#include <algorithm>
+#include <iostream>
+#include <map>
+#include <stack>
+#include <queue>
+#include <list>
+#include <utility>
+#include <string>
+
+using namespace std;
+
+int main(){
+    int T;
+    cin >> T;
+    for(int ca=1; ca <= T; ++ca){
+    printf("Case #%d: %d\n", ca, ret);
+    }
+    return 0;
+}
