@@ -8,7 +8,8 @@ export ZSH=~/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
+ZSH_THEME="bira"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -100,3 +101,12 @@ export JAVA_HOME=/usr/lib/jvm/jdk-10.0.2  ## 这里要注意目录要换成自�
 export JRE_HOME=${JAVA_HOME}/jre  
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
 export PATH=${JAVA_HOME}/bin:$PATH  
+
+# golang
+export PATH=~/go/bin:$PATH
+
+# key map for ganss keyboard
+alias kb='xmodmap -e "keycode 111 = slash question slash question"'
+
+export GOPATH=~/go
+export PATH=$(go env GOROOT)/bin:$PATH
