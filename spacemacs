@@ -18,6 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     sql
      yaml
      (spell-checking :variables spell-checking-enable-auto-dictionary t
                      spell-checking-enable-by-default nil
@@ -35,9 +36,12 @@ values."
      (spell-checking :variables spell-checking-enable-by-default nil)
      common-lisp
      auto-completion
-     (c-c++ :variables c-c++-enable-clang-support t)
+     (c-c++ :variables c-c++-enable-clang-support t
+            c-c++-default-mode-for-headers 'c++-mode)
      (python :variables python-enable-yapf-format-on-save t)
      games
+     semantic
+     cscope
      gtags
      html
      java
@@ -58,7 +62,9 @@ values."
       org-enable-reveal-js-support t)
      syntax-checking
      themes-megapack
+     scheme
      irony
+     (go :variables go-tab-width 4)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -125,8 +131,10 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         material
+                         monokai
+                         dracula
                          seti
+                         material
                          solarized-dark
                          spacemacs-dark
                          solarized-light
@@ -140,7 +148,8 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 15
+                               :size 17
+                               ;; :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
