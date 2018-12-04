@@ -305,12 +305,6 @@ values."
   (setq org-agenda-files (list "~/org/todo.org"))
   ;; vue.js
   (setq org-reveal-root "~/org/reveal")
-  (setq configuration-layer--elpa-archives
-        '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-          ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-          ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
-
-
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
 executes.
