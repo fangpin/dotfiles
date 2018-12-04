@@ -284,9 +284,9 @@ values."
         ;; '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
         ;;   ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
         ;;   ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
-  '(("melpa-cn" . "/home/fangpin/.emacs.d/elpa-mirror/melpa")
-    ("org-cn"   . "/home/fangpin/.emacs.d/elpa-mirror/org/")
-    ("gnu-cn"   . "/home/fangpin/.emacs.d/elpa-mirror/gnu/")))
+  '(("melpa-cn" . "~/.emacs.d/elpa-mirror/melpa")
+    ("org-cn"   . "~/.emacs.d/elpa-mirror/org/")
+    ("gnu-cn"   . "~/.emacs.d/elpa-mirror/gnu/")))
   ;; c
   (setq-default c-default-style "bsd")
   (setq-default c-basic-offset 4)
