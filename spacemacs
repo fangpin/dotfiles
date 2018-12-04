@@ -47,7 +47,8 @@ values."
      java
      javascript
      (shell :variables shell-default-position 'bottom
-            shell-default-shell 'term)
+            shell-default-shell 'shell
+            shell-default-term-shell "/bin/zsh")
      syntax-checking
      bibtex
      (latex :variables latex-build-command "latexMk"
