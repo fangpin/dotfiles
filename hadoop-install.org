@@ -1,0 +1,73 @@
+* create user
+#+BEGIN_SRC bash
+sudo useradd -m hadoop -s /bin/bash
+sudo passwd hadoop
+sudo adduser hadoop sudo
+sudo apt-get update
+sudo apt-get install openssh-server
+#+END_SRC
+
+* ssh
+#+BEGIN_SRC bash
+ssh-keygen -t rsa
+cat ~/.ssh/id_rsa.pub >> ./authorized_keys
+#+END_SRC
+
+* java
+#+BEGIN_SRC bash
+sudo apt-get install openjdk-11-jre openjdk-11-jdk
+# configure enviroment virable JAVA_HOME
+#+END_SRC
+
+* download hadoop
+http://mirror.bit.edu.cn/apache/hadoop/common/stable/
+
+* install hadoop
+#+BEGIN_SRC bash
+sudo tar -xvf hadoop-* -C /usr/local
+sudo mv /usr/local/hadoop* /usr/local/hadoop
+sudo chown -R hadoop /usr/local/hadoop
+echo "export PATH=/usr/local/hadoop/bin:$PATH" >> ~/.bashrc
+source ~/.bashrc
+#+END_SRC
+** test
+#+BEGIN_SRC bash
+hadoop version
+#+END_SRC
+
+* configure hadoop (local distributed)
+set JAVA_HOME at /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+
+/usr/local/hadoop/etc/hadoop
+- core-site.xml
+  #+BEGIN_SRC xml
+  <configuration>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>file:/usr/local/hadoop/tmp</value>
+        <description>Abase for other temporary directories.</description>
+    </property>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+    </property>
+</configuration>
+  #+END_SRC
+
+- hdfs-site.xml：
+#+BEGIN_SRC xml
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>file:/usr/local/hadoop/tmp/dfs/name</value>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>file:/usr/local/hadoop/tmp/dfs/data</value>
+    </property>
+</configuration>
+#+END_SRC
