@@ -10,7 +10,7 @@ sudo apt-get install openssh-server
 * ssh
 #+BEGIN_SRC bash
 ssh-keygen -t rsa
-cat ~/.ssh/id_rsa.pub >> ./authorized_keys
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 #+END_SRC
 
 * java
@@ -70,4 +70,26 @@ set JAVA_HOME at /usr/local/hadoop/etc/hadoop/hadoop-env.sh
         <value>file:/usr/local/hadoop/tmp/dfs/data</value>
     </property>
 </configuration>
+#+END_SRC
+* spark (local)
+http://spark.apache.org/downloads.html
+#+BEGIN_SRC bash
+sudo tar -xvf ~/spark-2.4.0-bin-without-hadoop.tgz -C /usr/local/
+sudo mv /usr/local/spark-2.4.0-bin-without-hadoop /usr/local/spark
+sudo chown -R hadoop:hadoop /usr/local/spark
+#+END_SRC
+
+- spark-env.sh
+#+BEGIN_SRC bash
+export SPARK_DIST_CLASSPATH=$(/usr/local/hadoop/bin/hadoop classpath)
+#+END_SRC
+
+- enviroment variables
+#+BEGIN_SRC 
+export JAVA_HOME=/usr/lib/jvm/default-java
+export HADOOP_HOME=/usr/local/hadoop
+export SPARK_HOME=/usr/local/spark
+export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.7-src.zip:$PYTHONPATH
+export PYSPARK_PYTHON=python3
+export PATH=$HADOOP_HOME/bin:$SPARK_HOME/bin:$PATH
 #+END_SRC
