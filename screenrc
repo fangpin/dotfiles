@@ -1,0 +1,9 @@
+startup_message off
+deflogin on
+vbell off
+defscrollback 1024
+altscreen on
+defencoding utf8
+encoding utf8 utf8
+
+hardstatus alwayslastline '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}]%{=b C}[ %1` %m-%d %c:%s ]%{W}'
