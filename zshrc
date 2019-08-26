@@ -53,7 +53,7 @@ ZSH_THEME="bira"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx autojump zsh-syntax-highlighting colored-man coloriz zsh-completion)
+plugins=(git autojump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,24 +89,5 @@ source $ZSH/oh-my-zsh.sh
 alias luo-ruan="ssh pin@202.120.39.10 -p51000"
 alias luo="ssh luo@202.120.38.75"
 
-alias matlab="/usr/local/MATLAB/R2017a/bin/matlab"
-
-export PYTHONPATH=$PYTHONPATH:~/repos/algorithm-reference-library
-export PATH=$PATH:~/Dowloads/htk/HTKTools
-export PATH=/home/fangpin/anaconda/bin:$PATH
-
-
-##set oracle jdk environment
-export JAVA_HOME=/usr/lib/jvm/jdk-10.0.2  ## 这里要注意目录要换成自己解压的jdk 目录
-export JRE_HOME=${JAVA_HOME}/jre  
-export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  
-export PATH=${JAVA_HOME}/bin:$PATH  
-
-# golang
-export PATH=~/go/bin:$PATH
-
 # key map for ganss keyboard
 alias kb='xmodmap -e "keycode 111 = slash question slash question"'
-
-export GOPATH=~/go
-export PATH=$(go env GOROOT)/bin:$PATH
