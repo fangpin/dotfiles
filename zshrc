@@ -91,3 +91,5 @@ alias luo="ssh luo@202.120.38.75"
 
 # key map for ganss keyboard
 alias kb='xmodmap -e "keycode 111 = slash question slash question"'
+
+export TERM=xterm-256color
