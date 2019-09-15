@@ -89,7 +89,4 @@ source $ZSH/oh-my-zsh.sh
 alias luo-ruan="ssh pin@202.120.39.10 -p51000"
 alias luo="ssh luo@202.120.38.75"
 
-# key map for ganss keyboard
-alias kb='xmodmap -e "keycode 111 = slash question slash question"'
-
 export TERM=xterm-256color
