@@ -34,16 +34,22 @@ values."
      ;; better-defaults
      emacs-lisp
      auto-completion
-     (c-c++ :variables c-c++-enable-clang-support t
-            c-c++-default-mode-for-headers 'c++-mode)
+     ;; (c-c++ :variables c-c++-enable-clang-support t
+     ;;        c-c++-default-mode-for-headers 'c++-mode)
+     (c-c++ :variables
+              c-c++-adopt-subprojects t
+              c-c++-default-mode-for-headers 'c++-mode
+              c-c++-backend 'lsp-cquery
+              c-c++-lsp-sem-highlight-rainbow t)
      (python :variables python-enable-yapf-format-on-save t)
      semantic
      gtags
      html
+     ;; (java :variables java-backend 'Meghanada)
      java
      javascript
      (shell :variables shell-default-position 'bottom
-            shell-default-term-shell "/bin/zsh")
+            shell-default-shell 'vterm)
      syntax-checking
      bibtex
      (latex :variables latex-build-command "latexMk"
@@ -53,9 +59,9 @@ values."
      git
      org
      syntax-checking
-     themes-megapack
+;;     themes-megapack
      scheme
-     irony
+     ;; irony
    ;; (go :variables go-tab-width 4)
      )
    ;; List of additional packages that will be installed without being
@@ -123,11 +129,8 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         material
-                         monokai
-                         seti
-                         solarized-dark
                          spacemacs-dark
+                         solarized-dark
                          solarized-light
                          sanityinc-solarized-dark
                          spacemacs-light

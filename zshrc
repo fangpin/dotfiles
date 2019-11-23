@@ -88,5 +88,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias luo-ruan="ssh pin@202.120.39.10 -p51000"
 alias luo="ssh luo@202.120.38.75"
+alias itct="ssh -p 45679 itct@202.120.38.184"
 
 export TERM=xterm-256color
