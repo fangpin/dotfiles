@@ -36,11 +36,12 @@ values."
      auto-completion
      ;; (c-c++ :variables c-c++-enable-clang-support t
      ;;        c-c++-default-mode-for-headers 'c++-mode)
-     (c-c++ :variables
-              c-c++-adopt-subprojects t
-              c-c++-default-mode-for-headers 'c++-mode
-              c-c++-backend 'lsp-cquery
-              c-c++-lsp-sem-highlight-rainbow t)
+     ;; (c-c++ :variables
+     ;;          c-c++-adopt-subprojects t
+     ;;          c-c++-default-mode-for-headers 'c++-mode
+     ;;          c-c++-backend 'lsp-cquery
+     ;;          c-c++-lsp-sem-highlight-rainbow t)
+     c-c++
      (python :variables python-enable-yapf-format-on-save t)
      semantic
      gtags
@@ -61,8 +62,8 @@ values."
      syntax-checking
 ;;     themes-megapack
      scheme
-     ;; irony
-   ;; (go :variables go-tab-width 4)
+     irony
+   (go :variables go-tab-width 4)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these

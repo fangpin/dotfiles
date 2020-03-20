@@ -87,9 +87,11 @@ go get -u -v github.com/nsf/gocode
 go get -u -v github.com/rogpeppe/godef
 go get -u -v github.com/golang/tools/cmd/guru
 go get -u -v github.com/golang/tools/cmd/gorename
-go get -u -v github.ocm/golang/tools/cmd/goimports
+go get -u -v github.com/golang/tools/cmd/goimports
 
 mkdir $GOPATH/src/golang.org/x -p
+# proxy needed
+export http_proxy=socks5://127.0.0.1:1080 https_proxy=socks5://127.0.0.1:1080
 cp -r $GOPATH/src/github.com/golang/tools $GOPATH/src/golang.org/x/tools
 cd $GOPATH/src/golang.org/x/tools/cmd/guru && go build && sudo cp guru $(go env GOROOT)/bin
 cd $GOPATH/src/golang.org/x/tools/cmd/gorename && go build && sudo cp gorename $(go env GOROOT)/bin
