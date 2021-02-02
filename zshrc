@@ -9,7 +9,7 @@ export ZSH=~/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 # ZSH_THEME="agnoster"
-ZSH_THEME="bira"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -91,3 +91,6 @@ alias luo="ssh luo@202.120.38.75"
 alias itct="ssh -p 45679 itct@202.120.38.184"
 
 export TERM=xterm-256color
+
+# screen
+export SCREENDIR=$HOME/.screen

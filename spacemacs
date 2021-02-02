@@ -42,6 +42,7 @@ values."
      ;;          c-c++-backend 'lsp-cquery
      ;;          c-c++-lsp-sem-highlight-rainbow t)
      c-c++
+     csharp
      (python :variables python-enable-yapf-format-on-save t)
      semantic
      gtags
@@ -49,18 +50,14 @@ values."
      ;; (java :variables java-backend 'Meghanada)
      java
      javascript
-     (shell :variables shell-default-position 'bottom
-            shell-default-shell 'vterm)
+     (shell :variables shell-default-position 'bottom)
      syntax-checking
-     bibtex
-     (latex :variables latex-build-command "latexMk"
-            latex-enable-auto-fill t)
      ranger
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      git
      org
      syntax-checking
-;;     themes-megapack
+     themes-megapack
      scheme
      irony
    (go :variables go-tab-width 4)
@@ -141,7 +138,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 15
+                               :size 16
                                ;; :size 14
                                :weight normal
                                :width normal
@@ -271,11 +268,12 @@ values."
 
 
 (defun dotspacemacs/user-init ()
+    (setq package-check-signature nil)
   ;; mirror source for melpa, org and gnu
-  (setq configuration-layer--elpa-archives
-         '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-           ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-           ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+;;  (setq configuration-layer--elpa-archives
+;;        '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+;;           ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+;;           ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
   ;; c
   (setq-default c-default-style "bsd")
   (setq-default c-basic-offset 4)
