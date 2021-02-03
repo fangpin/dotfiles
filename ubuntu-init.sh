@@ -32,7 +32,8 @@ curl -sLf https://spacevim.org/cn/install.sh | bash
 # cd && vim test.txt &
 
 # install spacemacs
-sudo apt-get install emacs25
+sudo add-apt-repository ppa:kelleyk/emacs
+sudo apt-get install emacs28
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 cd
 ln -s repos/dotfiles/spacemacs ~/.spacemacs
