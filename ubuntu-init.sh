@@ -108,3 +108,7 @@ sudo apt install libmysqlclient-dev
 # install nodejs 14.x
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
+
+# install clang
+sudo apt update --fix-missing
+sudo apt install clang

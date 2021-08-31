@@ -18,13 +18,9 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     sql
-     yaml
      (spell-checking :variables spell-checking-enable-auto-dictionary t
                      spell-checking-enable-by-default nil
                      enable-flyspell-auto-completion t)
-     vimscript
-     csv
      markdown
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -34,22 +30,15 @@ values."
      ;; better-defaults
      emacs-lisp
      auto-completion
-     ;; (c-c++ :variables c-c++-enable-clang-support t
-     ;;        c-c++-default-mode-for-headers 'c++-mode)
-     ;; (c-c++ :variables
-     ;;          c-c++-adopt-subprojects t
-     ;;          c-c++-default-mode-for-headers 'c++-mode
-     ;;          c-c++-backend 'lsp-cquery
-     ;;          c-c++-lsp-sem-highlight-rainbow t)
-     c-c++
-     csharp
+     (c-c++ :variables
+               c-c++-adopt-subprojects t
+               c-c++-backend 'lsp-ccls
+               c-c++-default-mode-for-headers 'c++-mode
+               c-c++-lsp-sem-highlight-rainbow t)
      (python :variables python-enable-yapf-format-on-save t)
      semantic
-     gtags
+     ;; gtags
      html
-     ;; (java :variables java-backend 'Meghanada)
-     java
-     javascript
      (shell :variables shell-default-position 'bottom)
      syntax-checking
      ranger
@@ -57,10 +46,8 @@ values."
      git
      org
      syntax-checking
-     themes-megapack
      scheme
-     irony
-   (go :variables go-tab-width 4)
+     (go :variables go-tab-width 4)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -68,9 +55,6 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages
    '(
-     org-alert
-     ;; irony
-     ;; company-irony
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -138,8 +122,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 16
-                               ;; :size 14
+                               :size 20
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
