@@ -47,7 +47,12 @@ values."
      org
      syntax-checking
      scheme
-     (go :variables go-tab-width 4)
+     (go :variables
+         go-tab-width 4
+         godoc-at-point-function 'godoc-gogetdoc
+         go-format-before-save t
+         gofmt-command "goimports"
+         go-backend 'lsp)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these

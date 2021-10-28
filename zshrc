@@ -91,6 +91,8 @@ alias luo="ssh luo@202.120.38.75"
 alias itct="ssh -p 45679 itct@202.120.38.184"
 
 export TERM=xterm-256color
+export PATH=$PATH:~/go/bin
 
 # screen
 export SCREENDIR=$HOME/.screen
+export PATH=$PATH:/usr/local/go/bin
