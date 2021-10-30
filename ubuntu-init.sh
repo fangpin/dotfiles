@@ -61,6 +61,7 @@ sudo apt-get install latex-cjk-all
 
 
 # install font source code pro
+sudo apt install unzip
 cd ~
 wget https://fontlibrary.org/assets/downloads/source-code-pro/8733444bf1b52108e4cad8cfcbc40e15/source-code-pro.zip
 unzip source-code-pro.zip
@@ -115,3 +116,9 @@ sudo apt-get install -y nodejs
 # install clang
 sudo apt update --fix-missing
 sudo apt install clang
+
+
+# wsl2 x-server
+sudo apt install -y tasksel
+sudo tasksel install xubuntu-desktop
+sudo apt install gtk2-engines
