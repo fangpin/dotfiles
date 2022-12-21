@@ -85,11 +85,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias luo-ruan="ssh pin@202.120.39.10 -p51000"
-alias luo="ssh luo@202.120.38.75"
-alias itct="ssh -p 45679 itct@202.120.38.184"
-
 export TERM=xterm-256color
 export PATH=$PATH:~/go/bin
 
@@ -98,7 +93,8 @@ export SCREENDIR=$HOME/.screen
 export PATH=$PATH:/usr/local/go/bin
 
 # wls xserver
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
-export LIBGL_ALWAYS_INDIRECT=1
+# export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+# export LIBGL_ALWAYS_INDIRECT=1
 # sudo /etc/init.d/dbus start &> /dev/null
-alias load-desktop=xfce4-session
+# alias load-desktop=xfce4-session
+. "$HOME/.cargo/env" 
