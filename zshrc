@@ -97,4 +97,58 @@ export PATH=$PATH:/usr/local/go/bin
 # export LIBGL_ALWAYS_INDIRECT=1
 # sudo /etc/init.d/dbus start &> /dev/null
 # alias load-desktop=xfce4-session
-. "$HOME/.cargo/env" 
+# . "$HOME/.cargo/env" 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# golang
+export GOROOT=$(brew --prefix golang)/libexec
+export GOPATH=$HOME/go_repos
+export GOBIN=$GOPATH/bin
+export GOPRIVATE="*.byted.org,*.everphoto.cn,git.smartisan.com"
+export PATH=$GOROOT/bin:$GOBIN:$PATH
+go env -w GOPROXY="https://go-mod-proxy.byted.org,https://goproxy.cn,https://proxy.golang.org,direct"
+go env -w GOPRIVATE="*.byted.org,*.everphoto.cn,git.smartisan.com"
+
+# flutter
+export PATH=$HOME/repos/flutter/bin:$PATH
+export PATH=$HOME/.gem/bin:$PATH
+
+# consul
+export CONSUL_HTTP_HOST=10.231.233.21
+export CONSUL_HTTP_PORT=2280
+# export CONSUL_IDC_NAME=boe
+export TCC_TIMEOUT=1000
+export TCC_DEV_TIMEOUT=1000
+export DEV_TCC_TIMEOUT=1000# g shell setup
+
+export PATH="$PATH:/usr/local/smlnj/bin"
+export PATH="$PATH:/Users/bytedance/.local/bin:/Users/bytedance/.cargo/bin/rust-analyzer"
+export EDITOR='nvim'
+
+# rust
+export RUST_BACKTRACE=1
+
+
+eval "$(atuin init zsh)"
+
+alias only_master='git checkout master && git pull && git branch | grep -v " master$" | xargs git branch -D'
+alias push_all='git add -A && git commit -m "commit all" && git push'
+alias publish="git checkout master && git pull && git checkout release && git pull && git merge master && git push && git checkout master"
+# [[ -s "/Users/bytedance/.gvm/scripts/gvm" ]] && source "/Users/bytedance/.gvm/scripts/gvm"
+
+# gvm use go1.22
+#
+
+
+# python env
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+export PATH=/Users/bytedance/.local/bin:$PATH
