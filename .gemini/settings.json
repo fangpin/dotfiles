@@ -1,0 +1,22 @@
+{
+  "ide": {
+    "hasSeenNudge": true,
+    "enabled": true
+  },
+  "general": {
+    "preferredEditor": "neovim"
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "ui": {
+    "theme": "GitHub"
+  },
+  "tools": {
+    "allowed": [
+      "run_shell_command(git)"
+    ]
+  }
+}
