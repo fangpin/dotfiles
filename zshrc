@@ -131,3 +131,77 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 export PATH="/Users/bytedance/.local/bin:$PATH"
+
+kauth() {
+  kinit fangpin.brave@BYTEDANCE.COM
+}
+
+devbox() {
+  kinit fangpin.brave@BYTEDANCE.COM && ssh fangpin.brave@10.199.198.52
+}
+
+# Start Cursor Agent with a stable workspace so zellij panes
+# don't pass an invalid cwd into child process spawns.
+agent() {
+  local agent_bin="$HOME/.local/bin/cursor-agent"
+  if [[ ! -x "$agent_bin" ]]; then
+    agent_bin="$(command -v cursor-agent 2>/dev/null || true)"
+  fi
+
+  if [[ -z "$agent_bin" ]]; then
+    echo "agent: cursor-agent not found in PATH" >&2
+    return 127
+  fi
+
+  local workspace_arg=""
+  if [[ $# -ge 2 && "$1" == "--workspace" ]]; then
+    workspace_arg="$2"
+  elif [[ $# -ge 1 && "$1" == --workspace=* ]]; then
+    workspace_arg="${1#--workspace=}"
+  fi
+
+  if [[ -n "$workspace_arg" && ! -d "$workspace_arg" ]]; then
+    echo "agent: --workspace is not a directory: $workspace_arg" >&2
+    return 1
+  fi
+
+  if [[ ! -d "$PWD" ]]; then
+    cd "$HOME" || return 1
+  fi
+
+  local resolved_pwd
+  resolved_pwd="$(pwd -P 2>/dev/null || pwd)"
+
+  if [[ -z "$workspace_arg" ]]; then
+    exec "$agent_bin" --workspace "$resolved_pwd" "$@"
+  fi
+
+  exec "$agent_bin" "$@"
+}
+export PATH=/Users/bytedance/.local/bin:$PATH
+
+# goenv should be initialized last so its shims win over Homebrew Go.
+export GOENV_ROOT="$HOME/.goenv"
+export GOENV_PATH_ORDER=front
+export PATH="$GOENV_ROOT/bin:$PATH"
+unset GOROOT
+eval "$(goenv init - zsh)"
+
+clear_worktree() {
+  git worktree list --porcelain | awk '
+  /^worktree / { wt=$2 }
+  /^branch / { br=$2; sub("refs/heads/","",br); print wt, br }
+' | while read wt br; do
+  [ -z "$br" ] && continue
+  git merge-base --is-ancestor "$br" master || continue
+  git -C "$wt" diff --quiet || continue
+  git -C "$wt" diff --cached --quiet || continue
+  echo "Removing $wt ($br)"
+  git worktree remove "$wt" && git branch -d "$br"
+  done
+}
+
+crw() {
+  kauth
+  ssh -N -L 8888:127.0.0.1:8888 fangpin.brave@10.199.198.52
+}

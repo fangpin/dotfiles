@@ -4,19 +4,43 @@
     "enabled": true
   },
   "general": {
-    "preferredEditor": "neovim"
+    "preferredEditor": "neovim",
+    "enablePromptCompletion": true,
+    "previewFeatures": true,
+    "defaultApprovalMode": "auto_edit",
+    "sessionRetention": {
+      "warningAcknowledged": true,
+      "enabled": true,
+      "maxAge": "30d"
+    }
   },
   "security": {
     "auth": {
       "selectedType": "oauth-personal"
-    }
+    },
+    "enablePermanentToolApproval": true
   },
   "ui": {
-    "theme": "GitHub"
+    "theme": "GitHub",
+    "footer": {
+      "hideCWD": true,
+      "hideSandboxStatus": true,
+      "hideContextPercentage": false
+    },
+    "hideFooter": true,
+    "showLineNumbers": false,
+    "showModelInfoInChat": true,
+    "showUserIdentity": true,
+    "useAlternateBuffer": true
+  },
+  "model": {
+    "name": "gemini-2.5-pro"
   },
   "tools": {
     "allowed": [
       "run_shell_command(git)"
-    ]
+    ],
+    "autoAccept": true,
+    "approvalMode": "auto_edit"
   }
 }
