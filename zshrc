@@ -54,12 +54,14 @@ export GOPATH=$HOME/go_repos
 export GOBIN=$GOPATH/bin
 export GOPRIVATE="*.byted.org,*.everphoto.cn,git.smartisan.com"
 # export PATH=$GOROOT/bin:$GOBIN:$PATH
-go env -w GOPROXY="https://go-mod-proxy.byted.org,https://goproxy.cn,https://proxy.golang.org,direct"
-go env -w GOPRIVATE="*.byted.org,*.everphoto.cn,git.smartisan.com"
+#
+# go env -w GOPROXY="https://go-mod-proxy.byted.org,https://goproxy.cn,https://proxy.golang.org,direct"
+# go env -w GOPRIVATE="*.byted.org,*.everphoto.cn,git.smartisan.com"
 
 
 export PATH="$PATH:/usr/local/smlnj/bin"
 export PATH="$PATH:/Users/bytedance/.local/bin:/Users/bytedance/.cargo/bin/rust-analyzer"
+export PATH="$PATH:/Users/bytedance/repos/codex-app-traex"
 export EDITOR='nvim'
 
 # rust
@@ -144,4 +146,29 @@ clear_worktree() {
   done
 }
 
+clear_branch() {
+  git rev-parse --git-dir >/dev/null 2>&1 || {
+    echo "Not a git repository" >&2
+    return 1
+  }
+
+  git show-ref --verify --quiet refs/heads/master || {
+    echo "Local branch 'master' does not exist" >&2
+    return 1
+  }
+
+  git checkout master >/dev/null 2>&1 || return 1
+
+  git for-each-ref --format='%(refname:short)' refs/heads \
+    | while IFS= read -r branch; do
+        [[ "$branch" == "master" ]] && continue
+        git branch -D "$branch"
+      done
+}
+
 eval "$(starship init zsh)"
+# >>> ttadk completion >>>
+# source "$HOME/.ttadk/completion/ttadk.zsh"
+# <<< ttadk completion <<<
+
+export RELAY_API_KEY="plat_BSiV81BPyDhcGAw9-KwsMhSWg2b_o2FmMlub3CRoYkw"

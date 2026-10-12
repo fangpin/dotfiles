@@ -1,0 +1,42 @@
+font-family = "Maple Mono NF"
+font-size = 13
+font-thicken = true
+adjust-cell-height = 0
+
+# theme = "Catppuccin Mocha"
+theme = "TokyoNight Night"
+
+# ==============================================================================
+# 窗口
+# ==============================================================================
+# window-padding-x/y: 内容与窗口边缘的内边距，文字不贴边
+# macos-titlebar-style: tabs 让标签页融入标题栏，更简洁
+# background-opacity: 背景透明度，0.92 微透明能隐约看到桌面壁纸
+# background-blur: 毛玻璃模糊强度，配合半透明使用（值越大越模糊，true=20）
+# window-save-state: 退出后保留窗口状态（分屏、标签页、窗口大小位置），下次启动自动恢复
+window-padding-x = 12
+window-padding-y = 8
+macos-titlebar-style = tabs
+background-opacity = 0.92
+background-blur = 20
+window-save-state = always
+
+# ==============================================================================
+# 光标
+# ==============================================================================
+# cursor-style: bar 细竖线 | block 方块 | underline 下划线
+# cursor-style-blink: 光标是否闪烁
+cursor-style = bar
+cursor-style-blink = true
+
+# ==============================================================================
+# 交互
+# ==============================================================================
+# copy-on-select: 鼠标选中文本自动复制到剪贴板
+# confirm-close-surface: 关闭窗口时不弹确认框
+# mouse-hide-while-typing: 打字时自动隐藏鼠标光标
+# shell-integration: 启用 zsh shell 集成（支持命令跳转等功能）
+copy-on-select = clipboard
+confirm-close-surface = false
+mouse-hide-while-typing = true
+shell-integration = zsh
