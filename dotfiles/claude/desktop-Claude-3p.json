@@ -1,0 +1,17 @@
+{
+  "deploymentMode": "3p",
+  "preferences": {
+    "ccAutoArchiveInactiveDays": 30,
+    "ccdScheduledTasksEnabled": true,
+    "coworkBrowserToolsEnabled": true,
+    "coworkHipaaRestricted": false,
+    "coworkScheduledTasksEnabled": true,
+    "coworkWebSearchEnabled": true,
+    "dockBounceEnabled": true,
+    "launchPreviewPersistedWorkspaces": [],
+    "launchPreviewSessionScopedSessions": [],
+    "menuBarEnabled": false,
+    "orgWorkAcrossAppsDisabled": false,
+    "sidebarMode": "epitaxy"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "deploymentMode": "3p",
+  "preferences": {
+    "coworkHipaaRestricted": false,
+    "coworkWebSearchEnabled": true,
+    "launchPreviewPersistedWorkspaces": [],
+    "launchPreviewSessionScopedSessions": []
+  }
+}

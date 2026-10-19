@@ -1,0 +1,6 @@
+prefix_rule(pattern=["file"], decision="allow")
+prefix_rule(pattern=["curl", "-I"], decision="allow")
+prefix_rule(pattern=["sed", "-n"], decision="allow")
+prefix_rule(pattern=["git", "status"], decision="allow")
+prefix_rule(pattern=["system_profiler", "SPAirPortDataType"], decision="allow")
+prefix_rule(pattern=["system_profiler", "SPNetworkDataType"], decision="allow")

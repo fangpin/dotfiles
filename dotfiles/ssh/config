@@ -1,0 +1,7 @@
+# Keep machine-specific hosts and usernames in this ignored local file.
+Include ~/.ssh/config.local
+
+Host *
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    HashKnownHosts yes

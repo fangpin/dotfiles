@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "domains": {
+    "NSGlobalDomain": {
+      "AppleInterfaceStyle": "Dark",
+      "ApplePressAndHoldEnabled": false,
+      "InitialKeyRepeat": 15,
+      "KeyRepeat": 2,
+      "NSAutomaticCapitalizationEnabled": true,
+      "NSAutomaticPeriodSubstitutionEnabled": true,
+      "com.apple.mouse.scaling": 0.875,
+      "com.apple.swipescrolldirection": true,
+      "com.apple.trackpad.scaling": 1
+    },
+    "com.apple.HIToolbox": {
+      "AppleFnUsageType": 0,
+      "AppleEnabledInputSources": [
+        {
+          "InputSourceKind": "Keyboard Layout",
+          "KeyboardLayout Name": "ABC",
+          "KeyboardLayout ID": 252
+        },
+        {
+          "Bundle ID": "com.apple.inputmethod.SCIM",
+          "Input Mode": "com.apple.inputmethod.SCIM.ITABC",
+          "InputSourceKind": "Input Mode"
+        },
+        {
+          "Bundle ID": "com.apple.CharacterPaletteIM",
+          "InputSourceKind": "Non Keyboard Input Method"
+        },
+        {
+          "Bundle ID": "com.apple.inputmethod.ironwood",
+          "InputSourceKind": "Non Keyboard Input Method"
+        },
+        {
+          "Bundle ID": "com.apple.inputmethod.SCIM",
+          "InputSourceKind": "Keyboard Input Method"
+        }
+      ],
+      "AppleSelectedInputSources": [
+        {
+          "InputSourceKind": "Keyboard Layout",
+          "KeyboardLayout Name": "ABC",
+          "KeyboardLayout ID": 252
+        },
+        {
+          "Bundle ID": "com.apple.inputmethod.SCIM",
+          "Input Mode": "com.apple.inputmethod.SCIM.ITABC",
+          "InputSourceKind": "Input Mode"
+        }
+      ]
+    },
+    "com.apple.AppleMultitouchTrackpad": {
+      "Clicking": true,
+      "DragLock": false,
+      "Dragging": false,
+      "TrackpadCornerSecondaryClick": 0,
+      "TrackpadFourFingerHorizSwipeGesture": 2,
+      "TrackpadFourFingerPinchGesture": 2,
+      "TrackpadFourFingerVertSwipeGesture": 2,
+      "TrackpadMomentumScroll": true,
+      "TrackpadPinch": true,
+      "TrackpadRightClick": true,
+      "TrackpadRotate": true,
+      "TrackpadScroll": true,
+      "TrackpadThreeFingerDrag": true,
+      "TrackpadThreeFingerHorizSwipeGesture": 0,
+      "TrackpadThreeFingerTapGesture": 2,
+      "TrackpadThreeFingerVertSwipeGesture": 0,
+      "TrackpadTwoFingerDoubleTapGesture": 1,
+      "TrackpadTwoFingerFromRightEdgeSwipeGesture": 3,
+      "USBMouseStopsTrackpad": false
+    },
+    "com.apple.driver.AppleBluetoothMultitouch.trackpad": {
+      "Clicking": true,
+      "DragLock": false,
+      "Dragging": false,
+      "TrackpadCornerSecondaryClick": 0,
+      "TrackpadFourFingerHorizSwipeGesture": 2,
+      "TrackpadFourFingerPinchGesture": 2,
+      "TrackpadFourFingerVertSwipeGesture": 2,
+      "TrackpadMomentumScroll": true,
+      "TrackpadPinch": true,
+      "TrackpadRightClick": true,
+      "TrackpadRotate": true,
+      "TrackpadScroll": true,
+      "TrackpadThreeFingerDrag": true,
+      "TrackpadThreeFingerHorizSwipeGesture": 0,
+      "TrackpadThreeFingerTapGesture": 2,
+      "TrackpadThreeFingerVertSwipeGesture": 0,
+      "TrackpadTwoFingerDoubleTapGesture": 1,
+      "TrackpadTwoFingerFromRightEdgeSwipeGesture": 3,
+      "USBMouseStopsTrackpad": false
+    },
+    "com.apple.finder": {
+      "AppleShowAllFiles": true,
+      "FXPreferredViewStyle": "icnv",
+      "FXRemoveOldTrashItems": true
+    },
+    "com.apple.dock": {
+      "autohide": true,
+      "show-recents": false,
+      "tilesize": 41
+    },
+    "com.apple.symbolichotkeys": {
+      "AppleSymbolicHotKeys": {
+        "60": {
+          "enabled": true,
+          "value": {
+            "type": "standard",
+            "parameters": [
+              32,
+              49,
+              1048576
+            ]
+          }
+        },
+        "61": {
+          "enabled": true,
+          "value": {
+            "type": "standard",
+            "parameters": [
+              32,
+              49,
+              786432
+            ]
+          }
+        }
+      }
+    }
+  }
+}

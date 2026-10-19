@@ -1,0 +1,103 @@
+model_reasoning_summary = "detailed"
+model_reasoning_effort = "xhigh"
+multi_agent = true
+
+[agents]
+max_threads = 12
+max_depth = 1
+
+[marketplaces.i-have-adhd]
+source_type = "git"
+source = "https://github.com/ayghri/i-have-adhd.git"
+ref = "main"
+
+[marketplaces.diagram-design]
+source_type = "git"
+source = "https://github.com/cathrynlavery/diagram-design.git"
+
+[plugins."computer-use@openai-bundled"]
+enabled = false
+
+[plugins."superpowers@openai-api-curated"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
+[plugins."i-have-adhd@i-have-adhd"]
+enabled = true
+
+[plugins."unified-computer-use@openai-bundled"]
+enabled = true
+
+[plugins."diagram-design@diagram-design"]
+enabled = true
+
+[plugins."code-review@openai-bundled"]
+enabled = true
+
+[features]
+js_repl = false
+memories = true
+
+[desktop]
+followUpQueueMode = "queue"
+localeOverride = "en-US"
+git-branch-prefix = "pin/"
+git-always-force-push = false
+git-create-pull-request-as-draft = false
+mac-menu-bar-enabled = false
+worktree-keep-count = 20
+appearanceDarkCodeThemeId = "github"
+appearanceTheme = "dark"
+open-local-url-in-target-preference = "external-browser"
+dock-icon-preference = "codex-system"
+show-context-window-usage = true
+hotkey-window-projectless-default-enabled = true
+reviewDelivery = "detached"
+preventSleepWhileRunning = true
+
+[desktop.appearanceDarkChromeTheme]
+accent = "#1f6feb"
+contrast = 60
+ink = "#e6edf3"
+opaqueWindows = false
+surface = "#0d1117"
+
+[desktop.appearanceDarkChromeTheme.fonts]
+
+[desktop.appearanceDarkChromeTheme.semanticColors]
+diffAdded = "#3fb950"
+diffRemoved = "#f85149"
+skill = "#bc8cff"
+
+[desktop.open-in-target-preferences]
+global = "ghostty"
+
+[tui]
+screen_reader_detection_done = true
+
+[memories]
+generate_memories = true
+use_memories = true

@@ -1,0 +1,33 @@
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "__DOTFILES_LOCAL_SECRET__",
+    "ANTHROPIC_BASE_URL": "http://127.0.0.1:8321",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL": "GPT-5.6-Sol[1M]",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL_NAME": "GPT-5.6-Sol",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "GPT-5.6-Sol",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL_NAME": "GPT-5.6-Sol",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "GPT-5.6-Sol[1M]",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL_NAME": "GPT-5.6-Sol",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "GPT-5.6-Sol[1M]",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL_NAME": "GPT-5.6-Sol",
+    "ANTHROPIC_MODEL": "GPT-5.4[1M]",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "GPT-5.6-Sol[1M]"
+  },
+  "model": "opus",
+  "enableWorkflows": true,
+  "enabledPlugins": {
+    "code-review@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": false,
+    "diagram-design@diagram-design": true
+  },
+  "extraKnownMarketplaces": {
+    "diagram-design": {
+      "source": {
+        "source": "github",
+        "repo": "cathrynlavery/diagram-design"
+      }
+    }
+  }
+}

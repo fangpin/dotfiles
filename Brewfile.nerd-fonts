@@ -1,0 +1,8 @@
+# Nerd Fonts (Patched with icons for terminals, Neovim, etc.)
+# Install only these: brew bundle --file=Brewfile.nerd-fonts
+# Symbols-only: use as a fallback / secondary font in terminal profiles
+cask "font-symbols-only-nerd-font"
+# Matches existing programming fonts in the main Brewfile
+cask "font-fira-code-nerd-font"
+cask "font-maple-mono-nf"
+cask "font-sauce-code-pro-nerd-font"

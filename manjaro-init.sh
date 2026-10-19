@@ -8,13 +8,13 @@ sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring
 
 # vim
 sudo pacman -S vim
-cd ~ && git clone http://www.github.com/fangpin/.vim
 
 
 # git repos
 mkdir -p ~/repos
 
-git clone http://www.github.com/fangpin/dotfiles ~/repos/dotfiles
+: "${DOTFILES_REPOSITORY_URL:?Set DOTFILES_REPOSITORY_URL to your public dotfiles repository}"
+git clone "${DOTFILES_REPOSITORY_URL}" ~/repos/dotfiles
 
 # ohmyzsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

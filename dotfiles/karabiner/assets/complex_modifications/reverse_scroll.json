@@ -1,0 +1,55 @@
+{
+    "title": "Reverse Scroll for Mouse",
+    "rules": [
+        {
+            "description": "Reverse scroll for specific mouse",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "scroll_down"
+                    },
+                    "to": [
+                        {
+                            "key_code": "scroll_up"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 1133,
+                                    "product_id": 50479
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "scroll_up"
+                    },
+                    "to": [
+                        {
+                            "key_code": "scroll_down"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 1133,
+                                    "product_id": 50479
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
